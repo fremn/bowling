@@ -9,9 +9,10 @@ class BowlingGame
   #
   # Returns Nothing
   def roll(pins)
+    @rolls.push(pins)
   end
-  
+
   def score
-    0
+    @rolls.reduce(:+)
   end
 end
